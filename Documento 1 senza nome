@@ -1,0 +1,128 @@
+DIPARTIMENTO
+Nome dipartimento -> VARCHAR(128) / NOT NULL / UNIQUE
+Sigla Dipartimento -> VARCHAR(16) / NOT NULL / UNIQUE
+Numero corsi di laurea -> TINYINT / NOT NULL
+Nomi corsi di laurea -> TEXT / NOT NULL
+responsabile dipartimento -> VARCHAR (60) / NULL
+Città -> VVARCHAR(60) / NOT NULL
+Cap -> TINYNUM / NOT NULL
+Indirizzo -> VARCHAR(128) / NOT NULL
+N. telefono -> VARCHAR(16) / NOT NULL
+N Fax -> VARCHAR(16) / NOT NULL
+mail direzione -> VARCHAR(128) / NOT NULL
+mail segreteria -> VARCHAR(128) / NULL
+calendario chiusure ateneo -> VARCHAR / NULL
+
+
+CORSO DI LAUREA 
+Nome corso di laurea -> VARCHAR(128) / NOT NULL / UNIQUE
+tipo di corso (laurea - magistrale - ciclo unico) -> VARCHAR(16) / NOT NULL
+durata -> VARCHAR (16) / NULL
+totale crediti formativi -> TINYNUM / NOTNULL
+N. tel ufficio studenti -> VARCHAR(128) / NOTNULL
+Città -> VVARCHAR(60) / NOT NULL
+Cap -> TINYNUM / NOT NULL
+struttura di riferimento / VARCHAR / NOTNULL
+classe -> VARCHAR(60) / NOTNULL
+lingua -> VARCHAR(16) / NULL
+responsabile corso -> VARCHAR(60) / NULL
+avviso di ammissione -> VARCHAR / NULL
+accesso (libero-programmato) -> VARCHAR(60) / NULL
+numero max studenti/studentesse -> TINYNUM / NULL
+contributi e borse -> VARCHAR / NULL
+calendario accademico -> VARCHAR / NULL
+crediti obbligatori -> TINYNUM / NULL
+crediti a scelta libera - TINYNUM / NULL
+crediti prova finale -> TINYNUM / NULL
+insegamenti primo anno -> TEXT / NOTNULL
+insegnamenti secondo anno -> TEXT / NOTNULL
+insegnamenti secondo anno -> TEXT / NOTNULL
+Caratteristiche e finalita -> TEXT / NULL
+Ambiti occupazionali -> TEXT / NULL
+Dalla triennale alla magistrale -> TEXT / NULL
+Curricula - TEXT / NULL
+
+CORSO
+docente -> VARCHAR(60) - NOTNULL
+mail docente -> VARCHAR(128) - NOTNULL
+assistenti -> VARCHAR - NULL
+mail assistenti -> TEXT / NULL
+codice corso ->  -> VARCHAR(16) / NOTNULL
+tipologia -> VARCHAR(60) / NULL
+ambito disciplinare -> VARCHAR(60) / NULL
+settore scientifico-disciplinare -> VARCHAR(60) / NULL
+aula -> VARCHAR(60) / NOTNULL
+orario lezioni -> TIME / NOTNULL
+crediti -> TINYNUM / NOTNULL
+esercitazioni -> VARCHAR(16) - NULL
+totale ore esercitazioni -> TINYNUM / NULL
+lezione -> VARCHAR(16) - NULL
+totale ore lezione -> TINYNUM / NULL
+inizio attività didattiche -> DATE / NULL
+fine attività didattiche -> DATE / NULL
+pre-requisiti -> TEXT / NULL
+conoscenze e abilità da aquisire -> TEXT / NULL
+modalità d'esame -> VARCHAR / NULL
+criteri di valutazione -> TEXT / NULL
+contenuti -> TEXT / NULL
+testi di riferimento -> TEXT / NULL
+date appelli -> VARCHAR / NULL
+
+
+INSEGNANTE
+nome 
+cognome
+foto
+dipartimento
+mail
+telefono
+qualifica
+settore scientifo'disciplinare
+rubrica di ateneo
+orario di ricevimento
+curriculum
+aree di ricerca
+pubblicazioni
+insegnamenti in corso
+
+APPELLO
+corso 
+codice corso
+responsabile corso
+crediti
+lingua
+data
+orario
+tipologia
+indirizzzo struttura
+aula
+durata
+membri commisione
+limite massimo iscrizione
+numero appello
+
+STUDENTE
+nome 
+cognome
+numero matricola
+ordinamento
+anno di immatricolazione
+foto
+data di nascita
+luogo di nascita
+cap
+indirizzo di residenza
+indirizzo domicilio
+fascia di contribuzione
+tipologia borsa di studio
+
+
+ESITO
+corso 
+codice corso
+data
+numero appello
+studenti iscritti
+matricola studenti iscritti
+matricola studenti promossi
+valutazioni studenti promossi
